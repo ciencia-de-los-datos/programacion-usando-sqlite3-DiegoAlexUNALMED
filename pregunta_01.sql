@@ -41,15 +41,14 @@ conn.commit()
 with open("tbl1.csv", "rt") as f:
     data = f.readlines()
 
+data
+
 # Separa los campos por comas
 data = [line.split(",") for line in data]
 
 # Convierte la fila en una tupla
 data = [tuple(line) for line in data]
 
-# Descarta la cabecera
-data = data[1:]
-
 cur.executemany("INSERT INTO tbl1 VALUES (?,?,?,?,?,?,?)", data)
 
-cur.execute("SELECT SUM(c12) FROM tbl1").fetchall()
+cur.execute("SELECT SUM(c12) FROM tbl1").fetchall()[0][0]
