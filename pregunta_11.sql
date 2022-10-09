@@ -38,3 +38,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 -- 
+select CAST(SUBSTR(c14,1,4) AS INTEGER) AS YEAR, COUNT(*) AS CANT from tbl1 WHERE CAST(SUBSTR(c14,1,4) AS INTEGER) = 2018
