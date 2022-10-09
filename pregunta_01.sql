@@ -18,10 +18,9 @@
 --  >>> Escriba su codigo a partir de este punto <<<
 --SELECT SUM(c12) FROM tbl1.csv
 
-import sqlite3
-import pandas as pd
-
 def pregunta_01():
+    import sqlite3
+    import pandas as pd
     conn = sqlite3.connect(":memory:")
     cur = conn.cursor()
     conn.executescript(
