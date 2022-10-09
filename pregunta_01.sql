@@ -16,7 +16,7 @@
 --  0  15137.63
 --
 --  >>> Escriba su codigo a partir de este punto <<<
---SELECT SUM(c12) FROM tbl1.csv
+SELECT SUM(c12) FROM tbl1.csv
 
 def pregunta_01():
     import sqlite3
