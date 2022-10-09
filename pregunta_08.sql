@@ -41,4 +41,4 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
-select c23 as YEAR, avg(c21) from tbl2 group by c23 order by c23
+select SUBSTR(c23,1,4) as YEAR, avg(c21) from tbl2 group by SUBSTR(c23,1,4)
