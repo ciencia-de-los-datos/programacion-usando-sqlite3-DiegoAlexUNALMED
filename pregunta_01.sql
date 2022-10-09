@@ -16,4 +16,19 @@
 --  0  15137.63
 --
 --  >>> Escriba su codigo a partir de este punto <<<
-SELECT SUM(c12) FROM tbl1.csv
+
+import pandas as pd
+
+DROP TABLE IF EXISTS tbl;
+
+CREATE TABLE tbl (
+  K0  CHAR(1),
+  K1  INT,
+  c12 FLOAT,
+  c13 INT,
+  c14 DATE,
+  c15 FLOAT,
+  c16 CHAR(4)
+  );
+  
+SELECT SUM(c12) FROM tbl
