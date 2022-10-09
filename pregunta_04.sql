@@ -39,4 +39,4 @@
 --  2  C  CCCE
 --
 --  >>> Escriba su codigo a partir de este punto <<<
--- 
+SELECT k0, c16 FROM tbl1 WHERE LEFT(c16,1) = LEFT(K0,1)
