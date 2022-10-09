@@ -17,8 +17,6 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 
-import pandas as pd
-
 DROP TABLE IF EXISTS tbl;
 
 CREATE TABLE tbl (
