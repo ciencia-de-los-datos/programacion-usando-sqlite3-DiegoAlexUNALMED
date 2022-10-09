@@ -44,4 +44,6 @@ data = pd.read_csv("https://raw.githubusercontent.com/ciencia-de-los-datos/progr
 data.rename(columns = {0:"K0", 1:"K1",2:"c12",3:"c13",4:"c14",5:"c15",6:"c16"}, inplace = True)
 
 cur.executemany("INSERT INTO tbl1 VALUES (?,?,?,?,?,?,?)", data.values)
-print(cur.execute("SELECT SUM(c12) FROM tbl1").fetchall()[0][0])
+
+df = pd.DataFrame({'SUM(c12)':[cur.execute("SELECT SUM(c12) FROM tbl1").fetchall()[0][0]]})
+print(df)
